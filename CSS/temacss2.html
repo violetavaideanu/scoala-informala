@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+        <link rel="stylesheet" href="grid.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<style>
+    .pageContent{
+        max-width: 100;
+        margin: 0 auto;
+        padding: 10px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        flex-wrap: wrap;
+        text-align:center;
+        font-family:"Muli"
+    }
+    .linia2{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    .linia3{
+            font-size: 13px;
+            color: grey; 
+        }
+
+    .star{
+            color:orange;
+            font-weight: bold;
+            font-size:20px;
+        }
+
+    .greyheart{
+            color:lightgrey;
+            font-weight:bold;
+            font-size:20px;
+        }
+
+    #redheart{
+            color:red;
+            font-weight:bold;
+            font-size:20px;
+        }
+               
+    .button{
+        padding: 8px 22px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 8px 4px;
+        border:2px solid black;
+        cursor: pointer;
+    }
+
+    #cart{           
+            background-color:black;
+            color:white;   
+        }
+
+    #view{ 
+            background-color:white;
+            color:black;         
+        }   
+</style>
+<title>Selectie produse</title>
+</head>    
+<body>
+    
+    <div class="pageContent">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+            <img src="poza1.png">
+            <p class="linia2">Wild West Hoodie</p>
+            <p class="linia3"><span class="star">&#x2605; &nbsp; </span> 5.0 &nbsp; &nbsp;
+                &nbsp; &nbsp; <span class="greyheart">&#x2764; &nbsp;</span> 29</p>
+            <p class="linia3">Lorem ipsum dolor sit amet, consectetur<br/>adipisicing.<p>
+            <button class="button" id="cart">CART</button>
+            <button class="button" id="view">VIEW</button>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+            <img src="poza2.png">
+            <p class="linia2">Wild West Hoodie</p>
+            <p class="linia3"><span class="star">&#x2605; &nbsp; </span> 5.0 &nbsp; &nbsp;
+                &nbsp; &nbsp;<span id="redheart">&#x2764; &nbsp;</span> 29
+            <p class="linia3">Lorem ipsum dolor sit amet, consectetur<br/>adipisicing.<p>
+            <button class="button" id="cart">CART</button>
+            <button class="button" id="view">VIEW</button>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+            <img src="poza3.png">
+            <p class="linia2">Wild West Hoodie</p>
+            <p class="linia3"><span class="star">&#x2605; &nbsp; </span> 5.0 &nbsp; &nbsp;
+                &nbsp; &nbsp; <span class="greyheart">&#x2764; &nbsp;</span> 29</p>
+            <p class="linia3">Lorem ipsum dolor sit amet, consectetur<br/>adipisicing.<p>
+            <button class="button" id="cart">CART</button>
+            <button class="button" id="view">VIEW</button>
+        </div>
+    </div>
+</body>
+</html>
