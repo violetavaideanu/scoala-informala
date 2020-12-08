@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema JS</title>
+	<script>
+    
+    // 1) Functia Equal
+
+	function equals (x,y){
+        if ( x===y){
+            var strictEgal = true;
+        } else {
+            var strictEgal = false;
+        }
+        return strictEgal;
+    }
+    
+    console.log ("equals (1, 1)", equals (1, 1));
+    console.log ("equals (1, 2)", equals (1, 2));
+    console.log ("equals (2, 1)", equals (2, 1));
+    console.log ("equals (2, 2)", equals (2, 2));
+    console.log ("equals (2, '2')", equals (2, "2"));
+    console.log ("equals (true, false)", equals (true, false));
+    console.log ("equals (false, false)", equals (false, false));
+    console.log ("equals ('Mary', 'Anne')", equals ("Mary", "Anne"));
+    console.log ("equals ('mary', 'Mary')", equals ("mary", "Mary"));
+    console.log ("equals ('Anne', 'Anne')", equals ("Anne", "Anne"));
+    console.log ("equals (5, 5.3)", equals (5, 5.3));
+    console.log ("equals (5.3, 5.3)", equals (5.3, 5.3));
+
+    
+    // 2) Functia Compare
+        
+	function compare (x,y){
+        if (x===y){
+            var rezultat = 0;
+        } else if (x < y){
+            var rezultat = -1;
+        } else{
+            var rezultat = 1;
+        }
+        return rezultat;
+    }
+    
+    console.log ("compare (1, 2)", compare (1, 2));
+    console.log ("compare (2, 2)", compare (2, 2));
+    console.log ("compare (3, 1)", compare (3, 1));
+    console.log ("compare ('a', 'A')", compare ("a", "A"));
+    console.log ("compare ('aasd', 'asd')", compare ("aasd", "asd"));
+    console.log ("compare ('10', '2')", compare ("10", "2"));
+    
+
+    // 3) Functia Max
+        
+    function max (x,y){
+        if (x > y){
+            var maxim = x;
+        }else {
+            var maxim = y;
+        }
+        return maxim;
+    }
+    
+    console.log ("max (1, 2)", max (1, 2));
+    console.log ("max (2, 2)", max (2, 2));
+    console.log ("max (3, 1)", max (3, 1));
+    console.log ("max ('a', 'A')", max ("a", "A"));
+    console.log ("max ('aasd', 'asd')", max ("aasd", "asd"));
+    console.log ("max ('10', '2')", max ("10", "2"));
+    
+
+    // 4) Functia Min
+        
+    function min (x,y){
+        if (x < y){
+            var minim = x;
+        } else{
+            var minim = y;
+        }
+        return minim;
+    }
+    
+    console.log ("min (1, 2)", min (1, 2));
+    console.log ("min (2, 2)", min (2, 2));
+    console.log ("min (3, 1)", min (3, 1));
+    console.log ("min ('a', 'A')", min ("a", "A"));
+    console.log ("min ('aasd', 'asd')", min ("aasd", "asd"));
+    console.log ("min ('10', '2')", min ("10", "2"));
+ 
+
+    // 5) Functia Suma
+        
+    function suma (n){
+        var s = 0;
+        for (var i = 1; i <= n; i++) {
+            if (n > 0)
+        var s = s + i;
+        }
+       return s;
+    }
+
+    console.log ("suma (3)", suma (3));
+    console.log ("suma (5)", suma (5));
+    console.log ("suma (7)", suma (7));
+    console.log ("suma (9)", suma (9));
+    console.log ("suma (10)", suma (10));
+
+
+    // 6) Functia Prim
+        
+    function prim (n){
+        if (n <= 1) return false;
+        if (n === 2) return true;
+    for (var i= 2; i < n; i++) { 
+        if (n % i === 0) {
+            return false;
+        } 
+    }
+    return true;
+    }
+
+    console.log ("prim (3)", prim (3));
+    console.log ("prim (5)", prim (5));
+    console.log ("prim (7)", prim (7));
+    console.log ("prim (12)", prim (12));
+    console.log ("prim (89)", prim (89));
+    console.log ("prim (91)", prim (91));
+    console.log ("prim (1)", prim (1));
+    
+
+    // 7) Functia sumaPrime
+        
+    function sumaPrime (n){
+        var suma = 2;
+        var a = 3
+        for ( var i = 1; i < n; a += 2){
+            if (prim (a)){
+                suma += a;
+                i++;    
+            }
+        } 
+        return suma;
+    }   
+    
+    function prim (n){
+        if (n <= 1) return false;
+        if (n === 2) return true;
+    for (var i= 2; i < n; i++) { 
+        if (n % i === 0) {
+            return false;
+        } 
+    }
+    return true;
+    }
+
+    console.log ("sumaPrime (1)", sumaPrime (1));
+    console.log ("sumaPrime (2)", sumaPrime (2));
+    console.log ("sumaPrime (3)", sumaPrime (3));
+    console.log ("sumaPrime (5)", sumaPrime (5));
+    console.log ("sumaPrime (7)", sumaPrime (7));
+    console.log ("sumaPrime (12)", sumaPrime (12));
+
+
+     // 8) Functia Invers
+        
+     function invers (n){
+        var inv = 0;
+        while (n > 0) {   
+         inv = inv * 10 + n % 10;
+         n = parseInt (n / 10);
+        }
+       return inv;
+    } 
+    
+    console.log ("invers (123)", invers (123));
+    console.log ("invers (100)", invers (100));
+    console.log ("invers (80)", invers (80));
+    console.log ("invers (123456)", invers (123456));
+
+
+    // 9) Functia produsImpare
+
+    function produsImpare(n) {
+        var p = 1;
+        for (var i = 1; i < (n * 2); i++) {
+            p = p * i;
+            i = i + 1;
+        }
+        return p;
+    }
+
+    console.log ("produsImpare (2)", produsImpare (2));
+    console.log ("produsImpare (3)", produsImpare (3));
+    console.log ("produsImpare (4)", produsImpare (4));
+    console.log ("produsImpare (5)", produsImpare (5));
+    console.log ("produsImpare (10)", produsImpare (10));
+
+
+    // 10) Functia contains
+
+    function contains([arr],x) {
+        var array = [1, 2, 3, 4, 5];
+        var k = 0;
+        for (var i = 0; i <= array.length; i++) {
+            if (array[i] == x) {
+            k = 1;
+            }
+        }
+        if (k == 0) {
+        k = false;
+        } else {
+            k = true;
+        } 
+        return k;
+    }      
+
+    console.log ("contains ([1,2,3,4,5],5)", contains ([1,2,3,4,5],5));
+    console.log ("contains ([1,2,3,4,5],1)", contains ([1,2,3,4,5],1));
+    console.log ("contains ([1,2,3,4,5],2)", contains ([1,2,3,4,5],2));
+    console.log ("contains ([1,2,3,4,5],3)", contains ([1,2,3,4,5],3));
+    console.log ("contains ([1,2,3,4,5],6)", contains ([1,2,3,4,5],6));
+    console.log ("contains ([1,2,3,4,5],10)", contains ([1,2,3,4,5],10));
+
+
+    // 11) Functia maxArray
+
+    function maxArray (arr) {
+       var max = arr [0];
+       for (var i = 1; i <= arr.length; i++){
+           if (max < arr [i]){
+               max = arr [i];
+           }
+	   }
+	   return max; 
+    }   
+
+    console.log ("maxArray ([1,2,3,4,5])", maxArray ([1,2,3,4,5]));
+    console.log ("maxArray ([5,4,5])", maxArray ([5,4,5]));
+    console.log ("maxArray ([-1, -2, -3])", maxArray ([-1, -2, -3]));
+    console.log ("maxArray (['aas','asa','bbb','bbbb'])", maxArray (["aas","asa","bbb","bbbb"]));
+
+
+    // 12) Functia sumMinMax
+
+    function sumMinMax (arr) {
+		var min = arr [0];
+		var max = arr [0];
+		for (var i = 1; i <= arr.length; i++){
+           if (arr [i] < min){
+			   min = arr [i];	  
+		   }
+		   if (max < arr [i]){
+			   max = arr [i];   
+		   } 
+	    } 
+	    return min + max;
+	}   
+            
+    console.log ("sumMinMax ([1,2,3,4,5])", sumMinMax ([1,2,3,4,5]));
+    console.log ("sumMinMax ([5,4,5])", sumMinMax ([5,4,5]));
+	console.log ("sumMinMax ([-1, -2, -3,])", sumMinMax ([-1, -2, -3]));
+	console.log ("sumMinMax ([-1, -2, -3, 1, 2, 3])", sumMinMax ([-1, -2, -3, 1, 2, 3]));
+	console.log ("sumMinMax ([11, 15, 17, 22])", sumMinMax ([11, 15, 17, 22]));
+    
+
+    // 13) Functia hasDuplicates
+
+    function hasDuplicates (array) {
+        var valuesAlreadySeen = [];
+        for (var i = 0; i < array.length; i++) {
+            var value = array[i];
+        if (valuesAlreadySeen.indexOf(value) !== -1) {
+        return true
+        }
+        valuesAlreadySeen.push(value);
+        }
+    return false
+    }
+       
+    console.log ("hasDuplicates ([1,2,3,4,5])", hasDuplicates ([1,2,3,4,5]));
+    console.log ("hasDuplicates ([5,4,5])", hasDuplicates ([5,4,5]));
+    console.log ("hasDuplicates ([-1, -2, -3])", hasDuplicates ([-1, -2, -3]));
+    console.log ("hasDuplicates ([-1, -2, -3, -3])", hasDuplicates ([-1, -2, -3, -3]));
+    console.log (`hasDuplicates (["asd","asd","asd"])`, hasDuplicates (["asd","asd","asd"]));
+
+
+    // 14) Functia produsPozitive
+
+    function produsPozitive (array) {
+       var p = 1;
+       for ( var i = 0; i <= array.length; i++) {
+           if ( array[i] > 0){
+               p = p * array[i];
+           } else { 
+           }
+        }
+        return p;   
+    }
+
+    console.log ("produsPozitive ([1,2,3,4,5])", produsPozitive ([1,2,3,4,5]));
+    console.log ("produsPozitive ([5,4,5])", produsPozitive ([5,4,5]));
+    console.log ("produsPozitive ([-1, -2, -3])", produsPozitive ([-1, -2, -3]));
+    console.log ("produsPozitive ([5,4,-5,-100])", produsPozitive ([5,4,-5,-100]));
+
+
+    // 15) Functia palindrom
+
+    function palindrom (str) {
+		var l = str.length;
+		for (var i = 0; i < l/2; i++){
+			if (str[i] !== str[l - 1 - i]){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	console.log ('palindrom ("123321")', palindrom ("123321"));
+    console.log ('palindrom ("12321")', palindrom ("12321"));
+    console.log ('palindrom ("1221")', palindrom ("1221"));
+    console.log ('palindrom ("asdffdsa")', palindrom ("asdffdsa"));
+    console.log ('palindrom ("asdfsa")', palindrom ("asdfsa"));
+
+	</script>
+</head>
+<body>
+<h3>Tema JS - partea 1</h3>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
