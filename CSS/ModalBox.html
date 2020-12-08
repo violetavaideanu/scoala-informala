@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modal Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .modal{
+        position: fixed;
+        background-color: rgb(245, 245, 245);
+        width: 660px;
+        height: 420px;
+        top: 50%;
+        left: 50%;
+        margin-left: -330px;
+        margin-top: -210px;
+    }
+    .modalWithBackdrop{
+        position:absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(116, 173, 173, 0.1);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modalWithBackdrop>div{
+        background-color: white;
+        color: black;
+        display: inline-block;
+        width:280px;
+        height: 200px;  
+        padding: 20px;    
+    }
+    .closebtn {
+        float: right;
+        top: 5px;
+        right: 15px;
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
+        font-weight: normal;
+    }
+
+    .closebtn:hover {
+        color: grey;
+    }
+    .button{
+        display: inline-block;
+        float: right;
+        padding: 6px 8px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;      
+        font-size: 17px;
+        margin: 2px;
+        cursor: pointer;
+    }
+    #close{           
+        background-color: white;
+        color: rgb(79, 79, 236); 
+        border: none; 
+    }
+    #submit{ 
+        background-color: rgb(79, 79, 236);
+        color:white; 
+        border: none;
+    }  
+    
+    form{
+        font-family: Arial, Helvetica, sans-serif;      
+        font-size: 17px; 
+        margin: 10px;   
+    } 
+    p{
+        font-family: Arial, Helvetica, sans-serif;      
+        font-size: 20px; 
+        font-weight:bold;
+        text-align: left;
+        margin: 10px;
+    } 
+    input[type="text"]{
+        padding:5px;
+        margin: 5px;
+        width: 250px;
+        font-family: Arial, Helvetica, sans-serif;      
+        font-size: 17px;
+    }
+   
+</style>
+</head>
+<body>
+    <div class="modal"></div>
+
+    <div class="modalWithBackdrop">
+       <div>
+        <p>Modal title
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span><p></br>
+        <form>
+            <label>Name</br>
+            <input type="text" name="name" placeholder="Name"/></label> </br></br>
+        </form>
+        <button class="button" id="close">Close</button>
+        <button class="button" id="submit">Submit</button>
+       </div>    
+    </div>
+</body>
+</html>
+
