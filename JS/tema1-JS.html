@@ -6,8 +6,8 @@
     
     // 1) Functia Equal
 
-	function equals (x,y){
-        if ( x===y){
+	function equals (x,y) {
+        if ( x===y) {
             var strictEgal = true;
         } else {
             var strictEgal = false;
@@ -31,12 +31,12 @@
     
     // 2) Functia Compare
         
-	function compare (x,y){
-        if (x===y){
+	function compare (x,y) {
+        if (x===y) {
             var rezultat = 0;
-        } else if (x < y){
+        } else if (x < y) {
             var rezultat = -1;
-        } else{
+        } else {
             var rezultat = 1;
         }
         return rezultat;
@@ -52,10 +52,10 @@
 
     // 3) Functia Max
         
-    function max (x,y){
-        if (x > y){
+    function max (x,y) {
+        if (x > y) {
             var maxim = x;
-        }else {
+        } else {
             var maxim = y;
         }
         return maxim;
@@ -71,10 +71,10 @@
 
     // 4) Functia Min
         
-    function min (x,y){
-        if (x < y){
+    function min (x,y) {
+        if (x < y) {
             var minim = x;
-        } else{
+        } else {
             var minim = y;
         }
         return minim;
@@ -90,11 +90,12 @@
 
     // 5) Functia Suma
         
-    function suma (n){
+    function suma (n) {
         var s = 0;
         for (var i = 1; i <= n; i++) {
-            if (n > 0)
-        var s = s + i;
+            if (n > 0) {
+                var s = s + i;   
+            }
         }
        return s;
     }
@@ -108,9 +109,13 @@
 
     // 6) Functia Prim
         
-    function prim (n){
-        if (n <= 1) return false;
-        if (n === 2) return true;
+    function prim (n) {
+        if (n <= 1) {
+            return false;
+        } 
+        if (n === 2) {
+            return true;  
+        }
     for (var i= 2; i < n; i++) { 
         if (n % i === 0) {
             return false;
@@ -130,11 +135,11 @@
 
     // 7) Functia sumaPrime
         
-    function sumaPrime (n){
+    function sumaPrime (n) {
         var suma = 2;
         var a = 3
-        for ( var i = 1; i < n; a += 2){
-            if (prim (a)){
+        for ( var i = 1; i < n; a += 2) {
+            if (prim (a)) {
                 suma += a;
                 i++;    
             }
@@ -142,9 +147,13 @@
         return suma;
     }   
     
-    function prim (n){
-        if (n <= 1) return false;
-        if (n === 2) return true;
+    function prim (n) {
+        if (n <= 1) {
+            return false;
+        } 
+        if (n === 2) {
+            return true;  
+        }
     for (var i= 2; i < n; i++) { 
         if (n % i === 0) {
             return false;
@@ -163,7 +172,7 @@
 
      // 8) Functia Invers
         
-     function invers (n){
+     function invers (n) {
         var inv = 0;
         while (n > 0) {   
          inv = inv * 10 + n % 10;
@@ -226,8 +235,8 @@
 
     function maxArray (arr) {
        var max = arr [0];
-       for (var i = 1; i <= arr.length; i++){
-           if (max < arr [i]){
+       for (var i = 1; i <= arr.length; i++) {
+           if (max < arr [i]) {
                max = arr [i];
            }
 	   }
@@ -245,11 +254,11 @@
     function sumMinMax (arr) {
 		var min = arr [0];
 		var max = arr [0];
-		for (var i = 1; i <= arr.length; i++){
-           if (arr [i] < min){
+		for (var i = 1; i <= arr.length; i++) {
+           if (arr [i] < min) {
 			   min = arr [i];	  
 		   }
-		   if (max < arr [i]){
+		   if (max < arr [i]) {
 			   max = arr [i];   
 		   } 
 	    } 
@@ -289,7 +298,7 @@
     function produsPozitive (array) {
        var p = 1;
        for ( var i = 0; i <= array.length; i++) {
-           if ( array[i] > 0){
+           if ( array[i] > 0) {
                p = p * array[i];
            } else { 
            }
@@ -307,8 +316,8 @@
 
     function palindrom (str) {
 		var l = str.length;
-		for (var i = 0; i < l/2; i++){
-			if (str[i] !== str[l - 1 - i]){
+		for (var i = 0; i < l/2; i++) {
+			if (str[i] !== str[l - 1 - i]) {
 				return false;
 			}
 		}
