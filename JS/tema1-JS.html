@@ -7,12 +7,11 @@
     // 1) Functia Equal
 
 	function equals (x,y) {
-        if ( x===y) {
-            var strictEgal = true;
+        if ( x === y) {
+            return true;
         } else {
-            var strictEgal = false;
+            return false;
         }
-        return strictEgal;
     }
     
     console.log ("equals (1, 1)", equals (1, 1));
@@ -32,14 +31,13 @@
     // 2) Functia Compare
         
 	function compare (x,y) {
-        if (x===y) {
-            var rezultat = 0;
+        if (x === y) {
+            return 0;
         } else if (x < y) {
-            var rezultat = -1;
+            return -1;
         } else {
-            var rezultat = 1;
+            return 1;
         }
-        return rezultat;
     }
     
     console.log ("compare (1, 2)", compare (1, 2));
@@ -54,11 +52,10 @@
         
     function max (x,y) {
         if (x > y) {
-            var maxim = x;
+            return x;
         } else {
-            var maxim = y;
+            return y;
         }
-        return maxim;
     }
     
     console.log ("max (1, 2)", max (1, 2));
@@ -73,11 +70,10 @@
         
     function min (x,y) {
         if (x < y) {
-            var minim = x;
+            return x;
         } else {
-            var minim = y;
+            return y;
         }
-        return minim;
     }
     
     console.log ("min (1, 2)", min (1, 2));
@@ -93,9 +89,8 @@
     function suma (n) {
         var s = 0;
         for (var i = 1; i <= n; i++) {
-            if (n > 0) {
-                var s = s + i;   
-            }
+            if (n > 0)
+        s = s + i;
         }
        return s;
     }
@@ -116,7 +111,7 @@
         if (n === 2) {
             return true;  
         }
-    for (var i= 2; i < n; i++) { 
+    for (var i = 2; i < n; i++) { 
         if (n % i === 0) {
             return false;
         } 
