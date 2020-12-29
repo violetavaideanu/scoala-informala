@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema JS part 2</title>
+	<script>
+    
+    // 1) Functia getDigit
+    
+    function getDigits (string) {
+        let result = "";
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] >= "0" && string[i] <= "9") {
+                result += string[i];
+            }
+        }   
+        return result;
+    }
+
+    console.log ('getDigits("as123dfgh123jkl")', getDigits("as123dfgh123jkl"));
+    console.log ('getDigits("asd1!2@3#$%^&*()fghjkl")', getDigits("asd1!2@3#$%^&*()fghjkl"));
+    console.log ('getDigits("asdfghjkl")', getDigits("asdfghjkl"));
+    console.log ('getDigits("asd0987fghjkl")', getDigits("asd0987fghjkl"));
+    console.log ('getDigits("ASD123FGHJKL")', getDigits("ASD123FGHJKL"));
+    
+    
+    // 2) Functia getLetters
+    
+    function getLetters (string) {
+        let result = "";
+        for (let i = 0; i < string.length; i++) {
+            if (string[i].toLowerCase() >= "a" && string[i].toLowerCase() <= "z") {
+                result += string[i];
+            }
+        }
+        return result;
+    }
+
+    console.log ('getLetters("as123dfgh123jkl")', getLetters("as123dfgh123jkl"));
+    console.log ('getLetters("asd1!2@3#$%^&*()fghjkl")', getLetters("asd1!2@3#$%^&*()fghjkl"));
+    console.log ('getLetters("asdfghjkl")', getLetters("asdfghjkl"));
+    console.log ('getLetters("asd0987fghjkl")', getLetters("asd0987fghjkl"));
+    console.log ('getLetters("ASD123FGHJKL")', getLetters("ASD123FGHJKL"));
+
+    
+    // 3) Functia getFirst5Letters
+
+    function getFirst5Letters (string) {
+        let result = "";
+        for (let i = 0; i < string.length; i++) {
+            if (string[i].toLowerCase() >= "a" && string[i].toLowerCase() <= "z" && result.length < 5) {
+                result += string[i];
+            }
+        }
+        return result;
+    }
+
+    console.log ('getFirst5Letters("as123dfgh123jkl")', getFirst5Letters("as123dfgh123jkl"));
+    console.log ('getFirst5Letters("asd1!2@3#$%^&*()fghjkl")', getFirst5Letters("asd1!2@3#$%^&*()fghjkl"));
+    console.log ('getFirst5Letters("asdfghjkl")', getFirst5Letters("asdfghjkl"));
+    console.log ('getFirst5Letters("asd0987fghjkl")', getFirst5Letters("asd0987fghjkl"));
+    console.log ('getFirst5Letters("ASD123FGHJKL")', getFirst5Letters("ASD123FGHJKL"));
+
+
+    // 4) Functia Concatenate
+
+	function concatenate (array) {
+        let str = "";
+        for (let i = 0; i < array.length; i++) {
+            str += array[i];
+        }
+        return str;
+    }
+    
+    console.log ('concatenate(["a","b","c"])', concatenate(["a","b","c"]));
+    console.log ('concatenate(["aa","bb","cc"])', concatenate(["aa","bb","cc"]));
+    console.log ('concatenate(["a","A"])', concatenate(["a","A"]));
+    console.log ('concatenate(["aasd","asd"])', concatenate(["aasd","asd"]));
+    console.log ('concatenate(["10","2"])', concatenate(["10","2"]));
+
+
+    // 5) Functia getAllDigits
+
+    function getAllDigits (array) {
+        let string = "";
+        let result = "";
+        for (let i = 0; i < array.length; i++) {
+            string += array[i];
+        }
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] >= "0" && string[i] <= "9") {
+                result += string[i];
+            }
+        }
+        return result;
+    }
+
+    console.log ('getAllDigits(["a1","b2","c3"])', getAllDigits(["a1","b2","c3"]));
+    console.log ('getAllDigits(["a1a","b1b","c1c"])', getAllDigits(["a1a","b1b","c1c"]));
+    console.log ('getAllDigits(["a","A","123"])', getAllDigits(["a","A","123"]));
+    console.log ('getAllDigits(["aas999d","asd"])', getAllDigits(["aas999d","asd"]));
+    console.log ('getAllDigits(["10","299"])', getAllDigits(["10","299"]));
+
+
+    // 6) Functia invertAllStrings
+
+    function invertAllStrings (strArr){
+        for (let i = 0; i < strArr.length; i++){
+        strArr[i] = reverse (strArr[i]);
+        }
+        return strArr;
+    }
+
+    function reverse (str){
+        let newStr = "";
+        for (let i = str.length - 1; i >= 0; i--){
+        newStr += str[i];
+        }
+        return newStr;
+    }
+
+    console.log ('invertAllStrings(["a1","b2","c3"])', invertAllStrings(["a1","b2","c3"]));
+    console.log ('invertAllStrings(["a1b","b1c","c1d"])', invertAllStrings(["a1b","b1c","c1d"]));
+    console.log ('invertAllStrings(["a","A","123"])', invertAllStrings(["a","A","123"]));
+    console.log ('invertAllStrings(["aas999d","asd"])', invertAllStrings(["aas999d","asd"]));
+    console.log ('invertAllStrings(["10","299",""])', invertAllStrings(["10","299",""]));
+
+
+    // 7) Functia Factorial
+        
+    function factorial (n) {
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+       
+    console.log ("factorial(1)", factorial(1));
+    console.log ("factorial(2)", factorial(2));
+    console.log ("factorial(3)", factorial(3));
+    console.log ("factorial(5)", factorial(5));
+    console.log ("factorial(7)", factorial(7));
+    console.log ("factorial(12)", factorial(12));
+
+
+    // 8) Functia CMMDC
+        
+    function cmmdc (a,b) {
+        while (b > 0) {   
+        let r = a % b;
+        a = b;
+        b = r;
+        }
+        return a;
+    }
+       
+    console.log ("cmmdc(2,3)", cmmdc(2,3));
+    console.log ("cmmdc(100,25)", cmmdc(100,25));
+    console.log ("cmmdc(12,16)", cmmdc(12,16));
+    console.log ("cmmdc(33,121)", cmmdc(33,121));
+
+
+    // 9) Functia CMMMC
+        
+    function cmmmc (a,b) {
+        let p = a * b;
+        while (b > 0) {   
+        let r = a % b;
+        a = b;
+        b = r;
+        }
+        return p/a;
+    }
+       
+    console.log ("cmmmc(2,3)", cmmmc(2,3));
+    console.log ("cmmmc(5,3)", cmmmc(5,3));
+    console.log ("cmmmc(12,16)", cmmmc(12,16));
+    console.log ("cmmmc(10,10)", cmmmc(10,10));
+
+
+    // 10) Functia Divizori
+        
+    function divizori (n) {
+        let array = [];
+        for ( let i = 2; i < n; i++) {
+        if (n % i == 0) {
+            array.push(i);
+        }
+        } 
+        return array;
+    }
+       
+    console.log ("divizori(64)", divizori(64));
+    console.log ("divizori(9)", divizori(9));
+    console.log ("divizori(12)", divizori(12));
+    console.log ("divizori(81)", divizori(81));
+    console.log ("divizori(63)", divizori(63));
+    
+
+    // 11) Functia Palindrom
+        
+    function palindrom (n) {
+           let invers = 0;
+           let copy = n;
+           while (n > 0) {   
+            invers = invers * 10 + n % 10;
+            n = parseInt (n / 10);
+           }
+          if (copy == invers) {
+              return true;
+          } else {
+              return false;
+          }
+       } 
+       
+       console.log ("palindrom (64)", palindrom (64));
+       console.log ("palindrom (111)", palindrom (111));
+       console.log ("palindrom (1221)", palindrom (1221));
+       console.log ("palindrom (123454321)", palindrom (123454321));
+       console.log ("palindrom (63)", palindrom (63));
+
+
+    // 12) Functia Sort
+
+    function sort (array){
+        let j = 0;
+        let arrayPare = [];
+        for (let i = 0; i < array.length; i++){
+            if (array[i] % 2 === 0){
+            arrayPare[j] = array[i];
+            j++;
+            }
+        }
+        for (let i = 0; i < j; i++){
+        for (let j = i+1; j < array.length; j++){
+            if (arrayPare[i] > arrayPare[j]){
+            let aux = arrayPare[i];
+            arrayPare[i] = arrayPare[j];
+            arrayPare[j] = aux;
+            }
+        }
+        }
+        return arrayPare;
+    } 
+    
+    console.log ("sort([1,2,3,4,5])", sort([1,2,3,4,5]));
+    console.log ("sort([5,4,5])", sort([5,4,5]));
+    console.log ("sort([4,8,6,-1,-2,-3,30,0])", sort([4,8,6,-1,-2,-3,30,0]));
+
+
+    // 13) Functia sortAscDesc
+
+    function sortAscDesc (arr) {
+        let left = 0;
+        let right = arr.length-1;
+        for (let i = 0; i < arr.length; i++) {
+        while (arr[left] % 2 === 0) {
+            left++;
+        }
+        while (arr[right] % 2 !== 0){
+            right--;
+        }
+        if (left < right){
+            let temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+        }
+        }
+        for (let i = 0; i < arr.length-1; i++){
+        for (let j = i+1; j < arr.length; j++) {
+        if (((arr[i] % 2 === 0) && (arr[j] % 2 === 0)) && (arr[i] > arr[j])) {
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        if (((arr[i] % 2 !== 0) && (arr[j] % 2 !== 0)) && (arr[i] < arr[j])) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        }
+        }
+        }
+        return arr;
+    }
+
+    console.log ("sortAscDesc([1,2,3,4,5])", sortAscDesc([1,2,3,4,5]));
+    console.log ("sortAscDesc([5,4,5])", sortAscDesc([5,4,5]));
+    console.log ("sortAscDesc([4,8,6,-1,-2,-3,30,0])", sortAscDesc([4,8,6,-1,-2,-3,30,0]));
+   
+
+    // 14) Functia binarySearch
+
+    function binarySearch (arr, x) {
+        let left = 0;
+        let right = arr.length - 1;
+        while (left <= right) {
+            let mid = Math.floor((left + right) / 2);
+            if (arr[mid] === x) {
+                return true;
+            } else if (x < arr[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return false ;
+    }
+
+    console.log ("binarySearch ([1,2,3,4,5],5)", binarySearch ([1,2,3,4,5],5));
+    console.log ("binarySearch ([1,2,3,4,5],1)", binarySearch ([1,2,3,4,5],1));
+    console.log ("binarySearch ([1,2,3,4,5],2)", binarySearch ([1,2,3,4,5],2));
+    console.log ("binarySearch ([1,2,3,4,5],3)", binarySearch ([1,2,3,4,5],3));
+    console.log ("binarySearch ([1,2,3,4,5],6)", binarySearch ([1,2,3,4,5],6));
+
+
+    // 15) Functia countBinarySearch
+
+    function countBinarySearch (arr, x) {
+        let left = 0;
+        let right = arr.length - 1;
+        let count = 0;
+        while (left <= right) {
+            count++;
+            let mid = Math.floor((left + right) / 2);
+            if (arr[mid] === x) {
+                return count;
+            } else if (x < arr[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return count ;
+    }
+
+    console.log ("countBinarySearch ([1,2,3,4,5],5)", countBinarySearch ([1,2,3,4,5],5));
+    console.log ("countBinarySearch ([1,2,3,4,5],1)", countBinarySearch ([1,2,3,4,5],1));
+    console.log ("countBinarySearch ([1,2,3,4,5],2)", countBinarySearch ([1,2,3,4,5],2));
+    console.log ("countBinarySearch ([1,2,3,4,5],3)", countBinarySearch ([1,2,3,4,5],3));
+    console.log ("countBinarySearch ([1,2,3,4,5],6)", countBinarySearch ([1,2,3,4,5],6));
+        
+	</script>
+</head>
+<body>
+<h3>Tema JS part 2</h3>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
