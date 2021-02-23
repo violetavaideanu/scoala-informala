@@ -6,10 +6,10 @@
     
     // 1) Functia getDigit
     
-    function getDigits (string) {
+    function getDigits(string){
         let result = "";
-        for (let i = 0; i < string.length; i++) {
-            if (string[i] >= "0" && string[i] <= "9") {
+        for (let i = 0; i < string.length; i++){
+            if (string[i] >= "0" && string[i] <= "9"){
                 result += string[i];
             }
         }   
@@ -25,10 +25,10 @@
     
     // 2) Functia getLetters
     
-    function getLetters (string) {
+    function getLetters(string){
         let result = "";
-        for (let i = 0; i < string.length; i++) {
-            if (string[i].toLowerCase() >= "a" && string[i].toLowerCase() <= "z") {
+        for (let i = 0; i < string.length; i++){
+            if (string[i].toLowerCase() >= "a" && string[i].toLowerCase() <= "z"){
                 result += string[i];
             }
         }
@@ -44,10 +44,10 @@
     
     // 3) Functia getFirst5Letters
 
-    function getFirst5Letters (string) {
+    function getFirst5Letters(string){
         let result = "";
-        for (let i = 0; i < string.length; i++) {
-            if (string[i].toLowerCase() >= "a" && string[i].toLowerCase() <= "z" && result.length < 5) {
+        for (let i = 0; i < string.length; i++){
+            if (string[i].toLowerCase() >= "a" && string[i].toLowerCase() <= "z" && result.length < 5){
                 result += string[i];
             }
         }
@@ -63,9 +63,9 @@
 
     // 4) Functia Concatenate
 
-	function concatenate (array) {
+	function concatenate(array){
         let str = "";
-        for (let i = 0; i < array.length; i++) {
+        for (let i = 0; i < array.length; i++){
             str += array[i];
         }
         return str;
@@ -80,14 +80,14 @@
 
     // 5) Functia getAllDigits
 
-    function getAllDigits (array) {
+    function getAllDigits(array){
         let string = "";
         let result = "";
-        for (let i = 0; i < array.length; i++) {
+        for (let i = 0; i < array.length; i++){
             string += array[i];
         }
-        for (let i = 0; i < string.length; i++) {
-            if (string[i] >= "0" && string[i] <= "9") {
+        for (let i = 0; i < string.length; i++){
+            if (string[i] >= "0" && string[i] <= "9"){
                 result += string[i];
             }
         }
@@ -103,17 +103,17 @@
 
     // 6) Functia invertAllStrings
 
-    function invertAllStrings (strArr){
+    function invertAllStrings(strArr){
         for (let i = 0; i < strArr.length; i++){
-        strArr[i] = reverse (strArr[i]);
+            strArr[i] = reverse (strArr[i]);
         }
         return strArr;
     }
 
-    function reverse (str){
+    function reverse(str){
         let newStr = "";
         for (let i = str.length - 1; i >= 0; i--){
-        newStr += str[i];
+            newStr += str[i];
         }
         return newStr;
     }
@@ -127,9 +127,9 @@
 
     // 7) Functia Factorial
         
-    function factorial (n) {
+    function factorial(n){
         let fact = 1;
-        for (let i = 1; i <= n; i++) {
+        for (let i = 1; i <= n; i++){
             fact *= i;
         }
         return fact;
@@ -145,11 +145,11 @@
 
     // 8) Functia CMMDC
         
-    function cmmdc (a,b) {
-        while (b > 0) {   
-        let r = a % b;
-        a = b;
-        b = r;
+    function cmmdc(a,b){
+        while (b > 0){
+            let r = a % b;
+            a = b;
+            b = r;
         }
         return a;
     }
@@ -162,12 +162,12 @@
 
     // 9) Functia CMMMC
         
-    function cmmmc (a,b) {
+    function cmmmc(a,b){
         let p = a * b;
-        while (b > 0) {   
-        let r = a % b;
-        a = b;
-        b = r;
+        while (b > 0){
+            let r = a % b;
+            a = b;
+            b = r;
         }
         return p/a;
     }
@@ -180,12 +180,12 @@
 
     // 10) Functia Divizori
         
-    function divizori (n) {
+    function divizori(n){
         let array = [];
-        for ( let i = 2; i < n; i++) {
-        if (n % i == 0) {
-            array.push(i);
-        }
+        for ( let i = 2; i < n; i++){
+            if (n % i == 0){
+                array.push(i);
+            }
         } 
         return array;
     }
@@ -199,19 +199,19 @@
 
     // 11) Functia Palindrom
         
-    function palindrom (n) {
-           let invers = 0;
-           let copy = n;
-           while (n > 0) {   
+    function palindrom(n){
+        let invers = 0;
+        let copy = n;
+        while (n > 0){
             invers = invers * 10 + n % 10;
             n = parseInt (n / 10);
-           }
-          if (copy == invers) {
-              return true;
-          } else {
-              return false;
-          }
-       } 
+        }
+        if (copy == invers){
+            return true;
+        } else {
+            return false;
+        }
+    } 
        
        console.log ("palindrom (64)", palindrom (64));
        console.log ("palindrom (111)", palindrom (111));
@@ -222,23 +222,23 @@
 
     // 12) Functia Sort
 
-    function sort (array){
+    function sort(array){
         let j = 0;
         let arrayPare = [];
         for (let i = 0; i < array.length; i++){
             if (array[i] % 2 === 0){
-            arrayPare[j] = array[i];
-            j++;
+                arrayPare[j] = array[i];
+                j++;
             }
         }
         for (let i = 0; i < j; i++){
-        for (let j = i+1; j < array.length; j++){
-            if (arrayPare[i] > arrayPare[j]){
-            let aux = arrayPare[i];
-            arrayPare[i] = arrayPare[j];
-            arrayPare[j] = aux;
+            for (let j = i+1; j < array.length; j++){
+                if (arrayPare[i] > arrayPare[j]){
+                    let aux = arrayPare[i];
+                    arrayPare[i] = arrayPare[j];
+                    arrayPare[j] = aux;
+                }
             }
-        }
         }
         return arrayPare;
     } 
@@ -250,35 +250,35 @@
 
     // 13) Functia sortAscDesc
 
-    function sortAscDesc (arr) {
+    function sortAscDesc(arr){
         let left = 0;
         let right = arr.length-1;
-        for (let i = 0; i < arr.length; i++) {
-        while (arr[left] % 2 === 0) {
-            left++;
-        }
-        while (arr[right] % 2 !== 0){
-            right--;
-        }
-        if (left < right){
-            let temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-        }
+        for (let i = 0; i < arr.length; i++){
+            while (arr[left] % 2 === 0){
+                left++;
+            }
+            while (arr[right] % 2 !== 0){
+                right--;
+            }
+            if (left < right){
+                let temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+            }
         }
         for (let i = 0; i < arr.length-1; i++){
-        for (let j = i+1; j < arr.length; j++) {
-        if (((arr[i] % 2 === 0) && (arr[j] % 2 === 0)) && (arr[i] > arr[j])) {
-            let temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
-        if (((arr[i] % 2 !== 0) && (arr[j] % 2 !== 0)) && (arr[i] < arr[j])) {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        }
-        }
+            for (let j = i+1; j < arr.length; j++){
+                if (((arr[i] % 2 === 0) && (arr[j] % 2 === 0)) && (arr[i] > arr[j])){
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+                if (((arr[i] % 2 !== 0) && (arr[j] % 2 !== 0)) && (arr[i] < arr[j])){
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
         }
         return arr;
     }
@@ -290,14 +290,14 @@
 
     // 14) Functia binarySearch
 
-    function binarySearch (arr, x) {
+    function binarySearch(arr, x){
         let left = 0;
         let right = arr.length - 1;
-        while (left <= right) {
+        while (left <= right){
             let mid = Math.floor((left + right) / 2);
-            if (arr[mid] === x) {
+            if (arr[mid] === x){
                 return true;
-            } else if (x < arr[mid]) {
+            } else if (x < arr[mid]){
                 right = mid - 1;
             } else {
                 left = mid + 1;
@@ -315,16 +315,16 @@
 
     // 15) Functia countBinarySearch
 
-    function countBinarySearch (arr, x) {
+    function countBinarySearch(arr, x){
         let left = 0;
         let right = arr.length - 1;
         let count = 0;
-        while (left <= right) {
+        while (left <= right){
             count++;
             let mid = Math.floor((left + right) / 2);
-            if (arr[mid] === x) {
+            if (arr[mid] === x){
                 return count;
-            } else if (x < arr[mid]) {
+            } else if (x < arr[mid]){
                 right = mid - 1;
             } else {
                 left = mid + 1;
