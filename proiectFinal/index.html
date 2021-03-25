@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramics Art Studio</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="getListaProduse();">
+    <!-- Loading -->
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-dots">
+            <div class="bounce"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- Navigation Menu -->
+    <input type="checkbox" id="check">
+    <nav>
+       <div class="logo"><img src="img/brand.png" alt="logo"/></div>
+       <div class="search-box">
+           <input type="text" name="search" placeholder="Search here" onkeyup="drawProduse();" autocomplete="off">
+           <span class="fa fa-search"></span>
+       </div>
+       <ul>
+           <li>
+               <a href ="index.html">
+                   <div class="icon"><i class="fa fa-home"></i></div>
+                   <div>Home</div>
+               </a>
+            </li>
+            <li>
+                <a href ="products.html">
+                    <div class="icon"><i class="fa fa-store"></i></div>
+                    <div>products</div>
+                </a>
+             </li>
+             <li>
+                <a href ="cart.html">
+                    <div class="icon"><i class="fa fa-cart-plus"></i></div>
+                    <div class="cart-items">0</div>
+                    <div>cart</div>
+                </a>
+             </li>
+             <li>
+                <a href ="admin.html">
+                    <div class="icon"><i class="fa fa-lock"></i></div>
+                    <div>admin</div>
+                </a>
+             </li>
+       </ul>
+       <label for="check" class="bar">
+           <span class="fa fa-bars" id="bars"></span>
+           <span class="fa fa-times" id="times"></span>
+       </label>
+   </nav>
+   <!-- Banner -->
+   <header class="hero">
+       <div class="banner">
+           <h1 class="banner-title">ceramics collection</h1>
+           <a href ="products.html"><button class="banner-btn">shop now</button></a>
+        </div>
+    </header>
+    <!-- Swiper -->
+    <section class="products">
+        <div class="section-title"><h2>best sellers</h2></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/orchid.jpg" alt="Ceaşcă Orchid" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Ceaşcă Orchid</h3>
+                        <h4>75.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/pinkOrchid.jpg" alt="Ceaşcă Pink Orchid" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Ceaşcă Pink Orchid</h3>
+                        <h4>75.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/earthButterfly.jpg" alt="Ceaşcă Earth Butterfly" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Ceaşcă Earth Butterfly</h3>
+                        <h4>75.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/snowflake.jpg" alt="Ceşti Snowflake White&Gold" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Ceşti Snowflake White&Gold</h3>
+                        <h4>65.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/rose.jpg" alt="Ceşti Rose" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Ceşti Rose</h3>
+                        <h4>65.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/birdie.jpg" alt="Ceaşcă Birdie" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Ceaşcă Birdie</h3>
+                        <h4>65.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/platouFirstSnow.jpg" alt="Platou First Snow" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Platou First Snow</h3>
+                        <h4>125.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/platouWinter.jpg" alt="Platou Winter" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Platou Winter</h3>
+                        <h4>125.00 Lei</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/farfurieBirdie.jpg" alt="Farfurie Birdie" class="swiper-img"/>
+                    <div class="info">
+                        <h3>Farfurie Birdie</h3>
+                        <h4>65.00 Lei</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- All Products -->
+    <section class="products">
+        <div class="section-title"><h2>all products</h2></div>
+        <div class="products-container">  
+
+        </div>
+     </section>
+
+     <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-center">
+                    <h3>informatii</h3>
+                    <p>Despre noi</p>
+                    <p>Livrare si plata</p>
+                    <p>Retur</p>
+                    <p>Program magazin</p>
+                    <p>Opiniile clientilor</p>
+                </div>
+                <div class="footer-center">
+                    <h3>legal</h3>
+                    <p>Termeni si conditii</p>
+                    <p>Politica de confidentialiate</p>
+                    <p>Politica de cookies</p>
+                    <p>Garantia calitatii</p>
+                    <p>ANPC</p>
+                </div>
+                <div class="footer-center">
+                    <h3>contact</h3>
+                    <div><span><i class="fas fa-map-marker-alt"></i></span>
+                        Str. Calea Dorobanti 80, Sector 1, Bucuresti, 012207
+                    </div>
+                    <div><span><i class="far fa-envelope"></i></span>
+                        contact@ceramics.ro
+                    </div>
+                    <div><span><i class="fas fa-phone"></i></span>
+                        +40 744 444 444
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+    });
+    </script>
+    
+    <script src="https://kit.fontawesome.com/891f608997.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

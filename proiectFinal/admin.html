@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="getListaProduseAdmin();">
+    <input type="checkbox" id="check">
+    <nav>
+       <div class="logo"><img src="img/brand.png" alt="logo"/></div>
+       <div class="search-box">
+           <input type="text" name="search" placeholder="Search here" onkeyup="drawProduseAdmin();" autocomplete="off">
+           <span class="fa fa-search"></span>
+       </div>
+       <ul>
+           <li>
+               <a href ="index.html">
+                   <div class="icon"><i class="fa fa-home"></i></div>
+                   <div>home</div>
+               </a>
+            </li>
+            <li>
+                <a href ="products.html">
+                    <div class="icon"><i class="fa fa-store"></i></div>
+                    <div>products</div>
+                </a>
+             </li>
+             <li>
+                <a href ="admin.html">
+                    <div class="icon"><i class="fa fa-lock"></i></div>
+                    <div>admin</div>
+                </a>
+             </li>
+       </ul>
+       <label for="check" class="bar">
+           <span class="fa fa-bars" id="bars"></span>
+           <span class="fa fa-times" id="times"></span>
+       </label>
+   </nav>
+   <div class="table-header">
+       <h2>Gestionare produse</h2>
+       <a href="adauga.html" ><button id="adauga-btn"><span>+</span> Adauga produs</button></a>
+   </div>
+   <table class="admin-table">
+       <thead>
+           <tr>
+               <th>Imagine</th>
+               <th>Nume</th> 
+               <th>Preţ</th>
+               <th>Cantitate</th>
+               <th></th>
+            </tr>
+        </thead>
+        <tbody class="listaAdmin">
+            
+        </tbody>
+  </table>
+
+  <script src="https://kit.fontawesome.com/891f608997.js" crossorigin="anonymous"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>

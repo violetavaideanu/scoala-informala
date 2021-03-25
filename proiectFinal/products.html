@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="getListaProduse();">
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-dots">
+            <div class="bounce"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <input type="checkbox" id="check">
+    <nav>
+       <div class="logo"><img src="img/brand.png" alt="logo"/></div>
+       <div class="search-box">
+           <input type="text" name="search" placeholder="Search here" onkeyup="drawProduse();" autocomplete="off">
+           <span class="fa fa-search"></span>
+       </div>
+       <ul>
+           <li>
+               <a href ="index.html">
+                   <div class="icon"><i class="fa fa-home"></i></div>
+                   <div>Home</div>
+                </a>
+            </li>
+            <li>
+                <a href ="products.html">
+                    <div class="icon"><i class="fa fa-store"></i></div>
+                    <div>products</div>
+                </a>
+            </li>
+            <li>
+                <a href ="cart.html">
+                    <div class="icon"><i class="fa fa-cart-plus"></i></div>
+                    <div class="cart-items">0</div>
+                    <div>cart</div>
+                </a>
+            </li>
+            <li>
+                <a href ="admin.html">
+                    <div class="icon"><i class="fa fa-lock"></i></div>
+                    <div>admin</div>
+                </a>
+            </li>
+        </ul>
+        <label for="check" class="bar">
+           <span class="fa fa-bars" id="bars"></span>
+           <span class="fa fa-times" id="times"></span>
+       </label>
+   </nav>
+   <section class="products">
+       <div class="section-title"><h2>all products</h2></div>
+       <div class="products-container">
+           
+       </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/891f608997.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adauga</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <form class="form-wrapper" onsubmit="salveaza(event);">
+        <div class="title">Adaugare produs</div>
+        <div class="admin-form">
+            <div class="input-field">
+                <label>Imagine</label>
+                <input type="text" class="input" name="poza"/>
+            </div>
+            <div class="input-field">
+                <label>Nume</label>
+                <input type="text" class="input" name="nume"/>
+            </div>
+            <div class="input-field">
+                <label>Descriere</label>
+                <textarea type="text" class="textarea" name="descriere"></textarea>  
+            </div>
+            <div class="input-field">
+                <label>Pret</label>
+                <input type="text" class="input" name="pret"/>
+            </div>
+            <div class="input-field">
+                <label>Cantitate</label>
+                <input type="text" class="input" name="cantitate"/>
+            </div>
+            <div class="input-field">
+                <input id="saveBtn" type="submit" value="Save"/>
+                <a href="admin.html"><input id="cancelBtn" type="button" value="Cancel"/></a>
+              
+            </div>
+        </div>
+    </form>
+
+    <script src="https://kit.fontawesome.com/891f608997.js" crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
+    
+</body>
+</html>

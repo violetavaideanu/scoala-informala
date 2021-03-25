@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css"/>  
+</head>
+<body onload="getProdus();">
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-dots">
+            <div class="bounce"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <input type="checkbox" id="check">
+    <nav>
+       <div class="logo"><img src="img/brand.png" alt="logo"/></div>
+       <div class="search-box">
+           <input type="search" placeholder="Search here">
+           <span class="fa fa-search"></span>
+       </div>
+       <ul>
+           <li>
+               <a href ="index.html">
+                   <div class="icon"><i class="fa fa-home"></i></div>
+                   <div>home</div>
+               </a>
+            </li>
+            <li>
+                <a href ="products.html">
+                    <div class="icon"><i class="fa fa-store"></i></div>
+                    <div>products</div>
+                </a>
+             </li>
+             <li>
+                <a href ="cart.html">
+                    <div class="icon"><i class="fa fa-cart-plus"></i></div>
+                    <div class="cart-items">0</div>
+                    <div>cart</div>
+                </a>
+             </li>
+             <li>
+                <a href ="admin.html">
+                    <div class="icon"><i class="fa fa-lock"></i></div>
+                    <div>admin</div>
+                </a>
+             </li>
+       </ul>
+       <label for="check" class="bar">
+           <span class="fa fa-bars" id="bars"></span>
+           <span class="fa fa-times" id="times"></span>
+       </label>
+   </nav>
+   <div class="detailsContainer">
+       <div class="back-to-result">
+        <button id="back" onclick="goBack();"> &lt;&lt;BACK</button> 
+       </div>
+       <div class="details">
+           <div class="details-image">
+               <img id="poza" src=""/>
+           </div>
+           <div class="details-info">
+               <ul>
+                   <li>
+                       <h1 id="nume"></h1>
+                   </li>
+                   <li id="pret"></li>
+               </ul>
+                <dl id="descriere">
+                    <dt></dt>
+                    <dd></dd>
+                    <dd></dd>
+                </dl></br>
+                <ul>
+                    <li id="cantitate"></li>
+                    <li>
+                        <strong>Cantitate:</strong>
+                        <select title="Introduceţi nr. de bucăţi dorite" name="quantity" class="add_quantity_select" id="articleQuantity"> 								
+                            <option value="1" selected="selected">1</option>									
+                            <option value="2">2</option>									
+                            <option value="3">3</option>									
+                            <option value="4">4</option>									
+                            <option value="5">5</option>							
+                        </select>
+                        
+                    </li>
+                    <li>
+                        <button id="add-button" onclick="addToCart();" class="primary">Add to cart</button>
+                        <div id ="toast"></div>
+                    </li>
+               </ul>
+
+           </div>
+       </div>
+   </div>
+   <script src="https://kit.fontawesome.com/891f608997.js" crossorigin="anonymous"></script>
+   <script src="main.js"></script>
+</body>
+</html>
