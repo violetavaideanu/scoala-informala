@@ -355,6 +355,7 @@ input[type="checkbox"]{
 
 #footer {
     background-color: rgb(245, 245, 245);
+    border-top: 1px solid rgb(112, 33, 33);
     padding: 1rem 1rem;
     line-height: 1.5rem;
     margin: 0 auto;
