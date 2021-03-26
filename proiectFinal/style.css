@@ -7,6 +7,9 @@
     --mainSpacing: 0.1rem;
     --mainTransition: all 0.3s linear;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     margin: 0;
@@ -54,14 +57,6 @@
 .swiper-slide:hover .viewBtn{
     opacity: 1;
     visibility: visible;
-}
-.swiper-button-next{
-    color: var(--primaryColor);
-    height: 5px;
-}
-.swiper-button-prev{
-    color: var(--primaryColor);
-    height: 5px;
 }
 
 /* Navigation menu */
@@ -963,5 +958,28 @@ tr:nth-child(even) {
 @keyframes fadeInOut{
     5%,95%{opacity:1; top:115px;}
     15%,85%{opacity:1; top:115px;}
+}
+
+.to-top{
+    background-color: var(--primaryColor);
+    position: fixed;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--mainBlack);
+    text-decoration: none;
+    pointer-events: none;
+    transition: all .4s;
+    opacity: 0;
+}
+.to-top.active{
+    bottom: 30px;
+    pointer-events: auto;
+    opacity: 1;
 }
 
