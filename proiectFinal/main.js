@@ -25,7 +25,7 @@ function drawProduse(){
         if(produs===null){
             continue;
         }
-        if(!produs.nume.toLowerCase().includes(produsCautat)){
+        if(!produs.nume.includes(produsCautat) && !produs.nume.toLowerCase().includes(produsCautat) && !produs.nume.toUpperCase().includes(produsCautat)){
             continue;
         }
         str+=`
