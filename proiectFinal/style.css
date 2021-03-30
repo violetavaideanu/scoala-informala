@@ -329,26 +329,31 @@ input[type="checkbox"]{
     opacity: 0;
     visibility: hidden;
     transition: all 500ms ease-in-out;
-    outline: none;
 }
-.viewBtn a{
+#btnView{
     width: 70px;
     line-height: 35px;
     background: #3e3e3e;
     color: var(--mainWhite);
     border-radius: 50px;
+    border: 1px solid #3e3e3e;
     transition: var(--mainTransition);
     font-weight: normal;
     font-size: 18px;
     text-transform: capitalize;
     text-align: center;
-    text-decoration: none;
     display: block;
     float: right;
+    outline: none;
+    cursor: pointer;
 }
-
-.viewBtn a:hover{
+#btnView:hover{
     background: var(--primaryColor);
+    border: 1 px solid var(--primaryColor);
+}
+.img-container a{
+    text-decoration: none;
+    color: var(--mainBlack)
 }
 
 /* Footer */

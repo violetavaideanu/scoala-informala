@@ -31,12 +31,14 @@ function drawProduse(){
         str+=`
             <div class="product">
                 <div class="img-container">
+                <a href="details.html?id=${i}">
                     <img src="${produs.poza}" class="product-img" alt="${produs.nume}"/>
-                    <div class="viewBtn"><a href="details.html?id=${i}">View</a></div>
+                    <div class="viewBtn"><button id="btnView">View</button></div>
                     <h3>${produs.nume}</h3>
+                </a>
                     <h4>${produs.pret}.00 Lei</h4>
                 </div>
-            </div>
+            </div>   
         `
     }
     document.querySelector(".products-container").innerHTML = str;
