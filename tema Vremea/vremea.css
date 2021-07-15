@@ -27,6 +27,7 @@ body{
     border: 2px solid #e9eaea;
     font-size: 16px;
     border-radius: 5px; 
+    outline: none;
 }
 button{
     width: 18%;
@@ -37,7 +38,9 @@ button{
     text-align: center;
     font-size: 16px; 
     border-radius: 5px;
+    border: 1px solid rgb(12, 173, 236);
     cursor: pointer;
+    outline: none;
 }
 .vremea{
     background: white;
@@ -68,30 +71,23 @@ h1{
 .descriere{
     text-transform: capitalize;
 }
-table{
-    margin: auto;
-    table-layout: fixed;
+.data{
+    background-color: rgb(206, 234, 250);
+    border: 1px solid rgb(206, 234, 250);
+    font-size: 16px;
+    line-height: 30px;
     width: 100%;
 }
-th{
-    background-color: rgb(206, 234, 250);
-    font-size: 18px;
-    line-height: 30px;
-    border: 5px solid white;
-}
 .lista-prognoza{
-    padding: 0 10px;
     text-align: center;
-    list-style: none;
-    display: grid;
-    grid-auto-columns: minmax(10px,auto);
-    grid-template-areas:
-        'ziua1 ziua2 ziua3 ziua4 ziua5 ziua6';
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .lista-prognoza ul{
     list-style: none; 
-    padding: 0; 
-    margin: 0; 
+    padding: 10px; 
+    margin: 10px;
     font-size: 16px; 
 }
