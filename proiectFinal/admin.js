@@ -1,4 +1,4 @@
-let url = "https://ceramicsart-2b19c-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://ceramicsart-ecc29-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduseAdmin = [];
 let produs = {};
