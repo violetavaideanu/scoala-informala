@@ -9,7 +9,7 @@
 body{
     
     margin: 0 auto;
-    background-color: lightgrey;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 h1{
@@ -27,7 +27,7 @@ h1{
     padding: 30px;
     text-align: center;
     align-items: center;
-    background-color: rgb(255, 231, 96);
+    background-color: lightgrey;
 }
 .date{
     min-width: 40%;
@@ -82,11 +82,11 @@ thead{
 }
 
 #modificaBtn{
-    background-color: rgb(161, 60, 161);
-    border: 1px solid rgb(161, 60, 161);
+    background-color: green;
+    border: 1px solid green;
 }
 
 #stergeBtn{
-    background-color: rgb(230, 23, 23);
-    border: 1px solid rgb(230, 23, 23);
+    background-color: red;
+    border: 1px solid red;
 }
