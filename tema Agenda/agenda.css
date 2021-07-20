@@ -7,7 +7,7 @@
     padding: 0;
 }
 body{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,7 +54,7 @@ h1{
     cursor: pointer;
 }
 #tabel{
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
 }
 #tabel td, th {
