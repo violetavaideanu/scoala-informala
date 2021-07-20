@@ -54,6 +54,7 @@ h1{
     cursor: pointer;
 }
 #tabel{
+    width: 95%;
     margin: 20px auto;
 }
 #tabel td, th {
