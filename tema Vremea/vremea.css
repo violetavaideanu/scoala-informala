@@ -28,6 +28,8 @@ body{
     font-size: 16px;
     border-radius: 5px; 
     outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 button{
     width: 50%;
