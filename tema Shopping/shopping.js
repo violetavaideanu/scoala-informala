@@ -1,11 +1,4 @@
-let inregistrari = [
-    {
-        "itemDescription": "Apa"
-    },
-    {
-        "itemDescription": "Suc de portocale"
-    }
-];
+let inregistrari = [];
 
 let indexEditare = -1;
 
