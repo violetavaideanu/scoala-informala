@@ -45,7 +45,7 @@ h1{
     margin: 0 auto;
     padding: 10px;
     background-color:#000066;
-    border: 1px solid white;
+    border: 1px solid #000066;
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -61,8 +61,8 @@ table td, th{
     font-size: 18px;
 }
 table span{
-    background-color: #e0e0d1;
-    padding: 8px;
+    background-color: lightgray;
+    padding: 6px;
 }
 .btn{
     display: inline-block;
@@ -72,13 +72,14 @@ table span{
     margin: 0 .25rem;
     cursor: pointer;
     color: white;
-    border: 1px solid white;
 }
 #modificaBtn{
     background-color: #006600;
+    border: 1px solid #006600;
 }
 #stergeBtn{
     background-color: #660000;
+    border: 1px solid #660000;
 }
 
 @media screen and (max-width:768px){
@@ -99,7 +100,7 @@ table span{
     table td, th {
         text-align: center;
         height: 30px;
-        padding: 1px;
+        padding: 0.5px;
         font-size: 15px;
     }
     .btn{
