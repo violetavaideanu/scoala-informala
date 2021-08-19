@@ -23,6 +23,7 @@ h1{
     display: flex;
     flex-direction: row; 
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -79,13 +80,13 @@ table span{
 }
 
 #modificaBtn{
-    background-color: green;
-    border: 1px solid green;
+    background-color: #28a745;
+    border: 1px solid #28a745;
 }
 
 #stergeBtn{
-    background-color: red;
-    border: 1px solid red;
+    background-color: #bb0b0b;
+    border: 1px solid #bb0b0b;
 }
 
 
