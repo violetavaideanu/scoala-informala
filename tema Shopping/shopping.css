@@ -74,15 +74,17 @@ table{
 #markBtn{
     width: 140px;
     height: 40px;
-    background-color: orange;
-    border: 2px solid darkorange;
+    background-color: #f09d51;
+    border: 2px solid #f09d51;
     font-family: inherit;
     font-size: 1rem;
     cursor: pointer;
     margin-right: 10px;
+    padding-right: 5px;
     color: black;
     margin-bottom: 10px;
     text-align: center;
+    
 }
 
 .markedItem{
@@ -93,8 +95,8 @@ table{
     font-family: inherit;
     font-size: 1rem;
     padding: 8px;
-    background-color: orange;
-    border: 1px solid darkorange;
+    background-color: #f09d51;
+    border: 1px solid #f09d51;
     text-align: center;
     cursor: pointer;
     margin-top: 5px;
