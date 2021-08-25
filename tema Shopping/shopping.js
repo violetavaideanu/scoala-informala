@@ -1,5 +1,4 @@
 let inregistrari = [];
-
 let indexEditare = -1;
 
 function draw(){
@@ -9,20 +8,20 @@ function draw(){
         if(inregistrari[i].action === "marked"){
         str+=`
             <tr>
-                <td class="markedItem">${inregistrari[i].itemDescription}</td>
+                <td class="markedItem">-${inregistrari[i].itemDescription}</td>
                 <td><input id="markBtn" type="button" value="Mark as buyed" onclick="markAsBuyed(${i});"></td>
             </tr>
         `
     } else {
         str+=`
             <tr>
-                <td class="unmarked">${inregistrari[i].itemDescription}</td>
+                <td class="unmarked">-${inregistrari[i].itemDescription}</td>
                 <td><input id="markBtn" type="button" value="Mark as buyed" onclick="markAsBuyed(${i});"></td>
             </tr>
         `
     }
     document.querySelector("#tabel tbody").innerHTML=str + str1;
-    }   
+    }  
 }
 
 function cancel(){
@@ -30,7 +29,7 @@ function cancel(){
     document.querySelector("form").reset();
 }
 
-function adauga(){
+function addItem(){
     let itemDescription = document.querySelector("[name='itemDescription']").value;
     inregistrari.push({
         "itemDescription": itemDescription

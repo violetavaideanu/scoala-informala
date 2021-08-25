@@ -1,90 +1,138 @@
-.hidden{
-    display:none !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@600&display=swap');
 
-html{
+
+*{
     margin: 0;
     padding: 0;
-    background-color: rgba(104, 138, 128, 0.986);
 }
-
 body{
-    width: 70%;
-    background-color:  rgb(255, 231, 96);
-    font-family: Arial, Helvetica, sans-serif;
-    margin:auto;
-    margin-top: 50px;
+    font-family: 'Tillana', cursive;
+    background-color: orange;
 }
-
-h1{
-    text-align:center;
-    font-size: 30px;
-    padding: 20px;
-}
-
 .container{
-    display: block;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.lista{
+    width: 600px;
+    min-height: 100vh;
+    margin: auto;
+    background-color: white;
+    box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.5);
+    border: 2px dashed black;
+}
+.lista h1{
+    font-size: 2.5rem;
+    margin-top: 1em;
     text-align: center;
-    line-height: 30px;;
 }
-
-input{
-    width: 40%;
-    padding: 10px;
-    margin-bottom: 25px;
-    border: 1px solid #e9eaea;
-    font-size: 20px;
-    border-radius: 10px;
-    outline: none;
-}
-
- #addBtn{
-    width: 90px;
-    background-color: rgb(83, 218, 123);
+.lista i{
+    font-size: 2rem;
     color: black;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 auto;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-right: 5px; 
 }
-
+#userInput{
+    font-family: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    width: 70%;
+    font-size: 1.5rem;
+}
+#allItems{
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 15px;
+    font-size: 2rem;
+}
 .sortName{
-    width: 100px;
-    background-color: rgb(218, 83, 146);
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 16px;
-    font-weight: bold;
+    width: 120px;
+    background-color: #000099;
+    border: 1px solid #000099;
+    font-family: inherit;
+    font-size: 1rem;
     cursor: pointer;
+    color:white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
 }
-
+.sortare{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sortare i{
+    color: white;
+    font-size: 1rem;
+}
 table{
     width: 100%;
 }
-
-table td{
-    text-align: center;
-    font-size: 18px;
-}
-
-table th{
-    padding: 5px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
 #markBtn{
     width: 140px;
     height: 40px;
-    background-color: rgba(255, 0, 0, 0.616);
-    font-size: 18px;
+    background-color: darkorange;
+    border: 2px solid black;
+    font-family: inherit;
+    font-size: 1rem;
     cursor: pointer;
-    margin: 5px;
+    margin-right: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+#markBtn:hover{
+    outline: 2px solid black;
+    outline-offset: -5px;
+}
+.markedItem{
+    text-decoration: line-through 2px solid black;
+}
+#addBtn{
+    border-radius: 50%;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 8px;
+    background-color: darkorange;
+    border: 0 darkorange;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 5px;
+}
+  
+
+@media(max-width:480px){
+    .lista h1{
+        font-size: 2rem;
+    }
+    .lista i{
+        font-size: 1.5rem;
+    }
+    #userInput{
+        font-size: 1rem;
+    }
+    #allItems{
+        font-size: 1.5rem;
+        margin-left: 25px;
+    }
+    .sortName{
+        width: 100px;
+        font-size: .9rem;
+    }
+    .sortare i{
+        font-size: .9rem;
+    }
 }
 
-.markedItem{
-    text-decoration: line-through;
+@media(max-width:320px){
+    #markBtn{
+        margin-right: 0;
+    }
+
+    #allItems{
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
 }

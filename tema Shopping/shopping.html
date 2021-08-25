@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
-    <script src="shopping.js"></script>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel = "stylesheet" href="shopping.css"/>
 </head>
-<body onload="draw();">
-    <form onsubmit= "event.preventDefault();">
-        <h1>Shopping List</h1>
-        <div class="container">
-            <input type = "text"  name="itemDescription"/>
-            <input id="addBtn" type="submit" onclick="adauga();" value="Add Item"/>
-            <br/>
-            <input class="sortName" type="button" onclick="sortAsc();" value="Sort asc"/>
-            <input class="sortName" type="button" onclick="sortDesc();" value="Sort desc"/>
+<body>
+    <div class="container">
+        <div class="lista">
+            <h1>Shopping List</h1>
+            <br>
+            <form onsubmit= "event.preventDefault();">
+                <div style="text-align: center;">
+                    <i id="pencil" class="fas fa-pencil-alt"></i><input type="text" name="itemDescription" id="userInput"/>
+                    <input id="addBtn" type="submit" onclick="addItem();" value="Add"/>
+                </div>
+                <br>
+                <div class="sortare">
+                    <button class="sortName" onclick="sortAsc();">
+                        <i class="fas fa-arrow-up"></i>Sort asc
+                    </button>
+                    <button class="sortName" onclick="sortDesc();">
+                        <i class="fas fa-arrow-down"></i>Sort desc
+                    </button>
+                </div>
+                <br>
+            </form>
+            <div id="allItems">
+                <table id="tabel">
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </form>
-    <table id="tabel" style="border-collapse:collapse;">
-        <thead>
-            <tr>
-                <th>Item description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    </div>
+    <script src="shopping.js"></script>
 </body>
 </html>
