@@ -5,15 +5,16 @@
 html{
     margin: 0;
     padding: 0;
-    background-color: rgba(104, 138, 128, 0.986);
+    background-color: #00802b;
 }
 
 body{
-    width: 70%;
-    background-color:  rgb(255, 231, 96);
+    width: 90%;
+    max-width: 900px;
+    background-color: #9fdf9f;
     font-family: Arial, Helvetica, sans-serif;
-    margin:auto;
-    margin-top: 50px;
+    margin: 0 auto;
+    margin-top: 50px;   
 }
 
 h1{
@@ -40,24 +41,24 @@ input{
 
  #addBtn{
     width: 90px;
-    background-color: rgb(83, 218, 123);
-    color: black;
+    background-color: #660000;
+    border: 1px solid #660000;
+    color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 16px;
-    font-weight: bold;
     margin: 0 auto;
-    border-radius: 5px;
     cursor: pointer;
 }
 
 .sortName{
     width: 100px;
-    background-color: rgb(218, 83, 146);
+    background-color: #000066;
+    border: 1px solid #000066;
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
+    color:white;
 }
 
 table{
@@ -79,12 +80,17 @@ table th{
 #markBtn{
     width: 140px;
     height: 40px;
-    background-color: rgba(255, 0, 0, 0.616);
+    background-color: #660000;
+    border: 1px solid #660000;
     font-size: 18px;
     cursor: pointer;
     margin: 5px;
+    color: white;
 }
 
 .markedItem{
-    text-decoration: line-through;
+    text-decoration: line-through 2px solid black;
 }
+
+
+
