@@ -8,14 +8,14 @@ function draw(){
         if(inregistrari[i].action === "marked"){
         str+=`
             <tr>
-                <td class="markedItem">${inregistrari[i].itemDescription}</td>
+                <td class="markedItem">-${inregistrari[i].itemDescription}</td>
                 <td><button id="markBtn" onclick="markAsBuyed(${i});">Mark as buyed</button></td>
             </tr>
         `
     } else {
         str+=`
             <tr>
-                <td class="unmarked">${inregistrari[i].itemDescription}</td>
+                <td class="unmarked">-${inregistrari[i].itemDescription}</td>
                 <td><button id="markBtn" onclick="markAsBuyed(${i});">Mark as buyed</button></td>
             </tr>
         `
