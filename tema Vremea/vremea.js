@@ -17,7 +17,7 @@ async function afiseazaVremea(){
     document.querySelector(".descriere").innerText = `Descriere: ${info.weather[0].description}`;
     document.querySelector(".umiditate").innerText = `Umiditate: ${info.main.humidity}%`;
     document.querySelector(".presiune").innerText = `Presiune: ${info.main.pressure}`;
-    document.querySelector(".temp").innerText = `Temperatura curenta: ${Math.floor(info.main.temp)}°C`;
+    document.querySelector(".temp").innerText = `Temperatura curentă: ${Math.floor(info.main.temp)}°C`;
     document.querySelector(".min").innerText = `Minima zilei: ${Math.floor(info.main.temp_min)}°C`;
     document.querySelector(".max").innerText = `Maxima zilei: ${Math.floor(info.main.temp_max)}°C`;
     document.querySelector("#mapUrl").src = `${urlHarta.front}q=${selectedCity}${urlHarta.end}`;
