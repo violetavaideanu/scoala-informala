@@ -12,7 +12,7 @@ body{
     display:none !important;
 }
 .titlu{
-    font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+    font-size: clamp(2.5rem, 4.5vw, 2.8rem);
     line-height: 1;
     color: #3747b3;
     text-align: center;
@@ -41,15 +41,14 @@ body{
 }
 button{
     width: 50%;
-    height: 50px;
     margin: 5px;
     padding: 8px;
     background-color: rgb(12, 173, 236);
+    border: 1px solid rgb(12, 173, 236);
     color: white;
     text-align: center;
     font-size: 16px; 
     border-radius: 5px;
-    border: 1px solid rgb(12, 173, 236);
     cursor: pointer;
     outline: none;
 }
