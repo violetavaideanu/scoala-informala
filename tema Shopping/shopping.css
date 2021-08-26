@@ -91,9 +91,7 @@ table{
     color: white;
 }
 
-.markedItem{
-    text-decoration: line-through 2px solid black;
-}
+
 #addBtn{
     border-radius: 50%;
     font-family: inherit;
@@ -130,13 +128,26 @@ table{
     }
 }
 
-@media(max-width:320px){
+@media(max-width:420px){
     #markBtn{
         margin-right: 0;
     }
 
     #allItems{
         font-size: 1.1rem;
+        margin-left: 5px;
+    }
+}
+
+@media(max-width:320px){
+    #markBtn{
+        margin-right: 0;
+        width: 110px;
+        font-size: .8rem;
+    }
+
+    #allItems{
+        font-size: .9rem;
         margin-left: 5px;
     }
 }
