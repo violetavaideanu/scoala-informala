@@ -91,7 +91,6 @@ table{
     color: white;
 }
 
-
 #addBtn{
     border-radius: 50%;
     font-family: inherit;
@@ -102,6 +101,12 @@ table{
     text-align: center;
     cursor: pointer;
     margin-top: 5px;
+}
+
+#allItems #tabel .markedItem{
+    text-decoration-line: line-through;
+    text-decoration-color: darkorange;
+    text-decoration-style: 5px solid;
 }
   
 
