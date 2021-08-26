@@ -103,13 +103,6 @@ table{
     margin-top: 5px;
 }
 
-#allItems #tabel .markedItem{
-    text-decoration-line: line-through;
-    text-decoration-color: darkorange;
-    text-decoration-style: 5px solid;
-}
-  
-
 @media(max-width:480px){
     .lista h1{
         font-size: 2rem;
