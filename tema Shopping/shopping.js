@@ -8,7 +8,7 @@ function draw(){
         if(inregistrari[i].action === "marked"){
         str+=`
             <tr>
-                <td class="markedItem" style="text-decoration: line-through";>-${inregistrari[i].itemDescription}</td>
+                <td class="markedItem" style="text-decoration: line-through; text-decoration-color: darkorange; text-decoration-thickness: 5px";>-${inregistrari[i].itemDescription}</td>
                 <td><button id="markBtn" onclick="markAsBuyed(${i});">Mark as buyed</button></td>
             </tr>
         `
