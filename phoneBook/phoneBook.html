@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <script src="agenda.js"></script>
+    <link rel="stylesheet" href="phoneBook.css"/>
+</head>
+<body onload="draw();">
+    <img src ="book.png">
+    <h1>Agenda telefonica</h1>
+    <div class="container">
+        <form onsubmit= "event.preventDefault();">
+            <label>
+                Nume
+                <input type = "text" class="date" name="nume"/>
+            </label>
+            <label>
+                Telefon
+                <input type = "text" class="date" name="telefon"/>
+            </label>
+            <input id="addBtn" type="submit" class="buton" onclick="adauga();" value="ADAUGA CONTACT"/>
+            <input id="editBtn" type="button" onclick="editPasul2();" class="buton hidden" value="EDITEAZA"/>
+        </form>
+    </div>
+    <div class="container">
+        <table id="tabel" style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th><span>NUME</span></th>
+                    <th><span>TELEFON</span></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

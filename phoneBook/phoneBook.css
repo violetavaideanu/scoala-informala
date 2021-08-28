@@ -1,0 +1,164 @@
+.hidden{
+    display:none !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 auto;
+    background-color: #ffc107;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    left: 45%;
+    z-index: 10;
+    color: #333;
+}
+h1{
+    text-align:center;
+    font-size: 3rem;
+    padding: 20px;
+    margin-top: 100px;
+}
+.container{
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-left: 12px dashed black;
+}
+.date{
+    flex-basis: 30%;
+    padding: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    border: 2px solid #e9eaea;
+    font-family: inherit;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+}
+.buton{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 8px;
+    background-color: #ffc107;
+    border: 4px solid #ffc107;
+    color: black;
+    border-radius: 50px;
+    text-align: center;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.buton:hover{
+    background-color: black;
+    border: 4px solid #ffc107;
+    color: white;
+    font-weight: bold;
+}
+table{
+    width: 100%;
+}
+table td, th{
+    padding: 6px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+table span{
+    border: 0;
+    border-bottom: 4px solid black;
+}
+.btn{
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5em 1.5em;
+    margin: .25em;
+    cursor: pointer;
+    color: white;
+}
+#modificaBtn{
+    background-color: #006600;
+    border: 1px solid #006600;
+}
+#stergeBtn{
+    background-color: #660000;
+    border: 1px solid #660000;
+}
+
+@media screen and (min-width:770px){
+    .btn{
+        border-radius: 50px;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .date{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    table{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    table td, th {
+        text-align: center;
+        height: 30px;
+        padding: 0.5px;
+        font-size: 15px;
+    }
+    .btn{
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .btn{
+        margin-right: .2em;
+        margin-bottom: .5em;
+    }
+    table td, th {
+        font-size: .9rem;      
+    }
+}
+
+@media screen and (max-width:540px){
+    img{
+        position: absolute;
+        left: 40%;
+    }
+}
+
+@media screen and (min-width:1400px){
+    img{
+        position: absolute;
+        left: 48%;
+    }
+}
+
+
