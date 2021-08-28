@@ -9,24 +9,35 @@
 body{
     margin: 0 auto;
     background-image: url("leatherblack.jpg");
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#agenda{
+    font-size: 80px;
+    position: absolute;
+    top: 30px;
+    left: 45%;
+    z-index: 10;
+    color: white;
+}
+
 h1{
     text-align:center;
-    font-size: 40px;
+    font-size: 3rem;
     padding: 20px;
+    margin-top: 100px;
     color: white;
 }
 .container{
     width: 80%;
-    max-width: 900px;
+    max-width: 800px;
     background-color: white;
     display: flex;
     flex-direction: row; 
     justify-content: space-around;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 20px;
     border-radius: 5px;
+    border-left: 12px dashed #000066;
     box-shadow: 0 0 10px rgba(0,0,0,.50);
 }
 .date{
@@ -48,9 +59,10 @@ h1{
     background-color:#000066;
     border: 1px solid #000066;
     color: white;
-    border-radius: 10px;
+    border-radius: 50px;
     text-align: center;
-    font-size: 14px;
+    font-family: inherit;
+    font-size: .9rem;
     cursor: pointer;
 }
 table{
@@ -59,18 +71,19 @@ table{
 table td, th{
     padding: 6px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 table span{
-    background-color: lightgray;
-    padding: 6px;
+    border: 0;
+    border-bottom: 4px solid rgb(100, 100, 100);
 }
 .btn{
     display: inline-block;
     border-radius: 10px;
+    font-family: inherit;
     font-size: 1rem;
     padding: .5em 1.5em;
-    margin: 0 .25rem;
+    margin: .25rem;
     cursor: pointer;
     color: white;
 }
@@ -81,6 +94,13 @@ table span{
 #stergeBtn{
     background-color: #660000;
     border: 1px solid #660000;
+}
+
+@media screen and (min-width:770px){
+    .btn{
+        border-radius: 50px;
+    }
+
 }
 
 @media screen and (max-width:768px){
@@ -110,3 +130,26 @@ table span{
     }
 }
 
+@media screen and (max-width:320px){
+    .btn{
+        margin-right: .2em;
+        margin-bottom: .5em;
+    }
+    table td, th {
+        font-size: .9rem;      
+    }
+}
+
+@media screen and (max-width:540px){
+    img{
+        position: absolute;
+        left: 40%;
+    }
+}
+
+@media screen and (min-width:1400px){
+    img{
+        position: absolute;
+        left: 48%;
+    }
+}
