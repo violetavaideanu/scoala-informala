@@ -1,6 +1,6 @@
 let inregistrari = [
     {
-        "nume": "Andreea",
+        "nume": "Alina",
         "telefon": "0740112233"
     },
     {
