@@ -6,31 +6,31 @@
     <title>Agenda</title>
     <script src="agenda.js"></script>
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link rel="stylesheet" href="agenda.css">
+    <link rel="stylesheet" href="agenda2.css"/>
 </head>
 <body onload="draw();">
     <i id="agenda" class="far fa-address-book"></i>
-    <h1>Agenda telefonica</h1>
+    <h1>Phone Book</h1>
     <div class="container">
         <form onsubmit= "event.preventDefault();">
             <label>
-                Nume
+                Name
                 <input type = "text" class="date" name="nume"/>
             </label>
             <label>
-                Telefon
+                Phone
                 <input type = "text" class="date" name="telefon"/>
             </label>
-            <input id="addBtn" type="submit" class="buton" onclick="adauga();" value="ADAUGA CONTACT"/>
-            <input id="editBtn" type="button" onclick="editPasul2();" class="buton hidden" value="EDITEAZA"/>
+            <input id="addBtn" type="submit" class="buton" onclick="adauga();" value="ADD CONTACT"/>
+            <input id="editBtn" type="button" onclick="editPasul2();" class="buton hidden" value="EDIT"/>
         </form>
     </div>
     <div class="container">
-        <table id="tabel">
+        <table id="tabel" style="border-collapse:collapse;">
             <thead>
                 <tr>
-                    <th><span>Nume</span></th>
-                    <th><span>Telefon</span></th>
+                    <th><span>NAME</span></th>
+                    <th><span>PHONE</span></th>
                     <th></th>
                     <th></th>
                 </tr>

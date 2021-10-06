@@ -26,8 +26,8 @@ function draw(){
             <tr>
                 <td>${inregistrari[i].nume}</td>
                 <td>${inregistrari[i].telefon}</td>
-                <td><input id="modificaBtn" class="btn" type="button" value="Modifica" onclick="edit(${i});"></td>
-                <td><input id="stergeBtn" class="btn" type="button" value="Sterge" onclick="del(${i});" /></td>
+                <td><input id="modificaBtn" class="btn" type="button" value="Edit" onclick="edit(${i});"></td>
+                <td><input id="stergeBtn" class="btn" type="button" value="Delete" onclick="del(${i});" /></td>
             </tr>
         `
     }

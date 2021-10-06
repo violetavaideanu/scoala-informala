@@ -15,7 +15,7 @@ body{
     font-size: 80px;
     position: absolute;
     top: 30px;
-    left: 45%;
+    left: 48%;
     z-index: 10;
     color: white;
 }
@@ -37,7 +37,7 @@ h1{
     margin: 15px auto;
     padding: 20px;
     border-radius: 5px;
-    border-left: 12px dashed #000066;
+    border-left: 12px dashed #343a40;
     box-shadow: 0 0 10px rgba(0,0,0,.50);
 }
 .date{
@@ -56,13 +56,14 @@ h1{
     justify-content: center;
     margin: 0 auto;
     padding: 10px;
-    background-color:#000066;
-    border: 1px solid #000066;
+    width: 9rem;
+    background-color:#343a40;
+    border: 1px solid #343a40;
     color: white;
     border-radius: 50px;
     text-align: center;
     font-family: inherit;
-    font-size: .9rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 table{
@@ -75,13 +76,15 @@ table td, th{
 }
 table span{
     border: 0;
-    border-bottom: 4px solid rgb(100, 100, 100);
+    border-bottom: 4px solid #343a40;
 }
 .btn{
     display: inline-block;
     border-radius: 10px;
+    width: 7rem;
     font-family: inherit;
     font-size: 1rem;
+    text-align: center;
     padding: .5em 1.5em;
     margin: .25rem;
     cursor: pointer;
@@ -96,7 +99,7 @@ table span{
     border: 1px solid #660000;
 }
 
-@media screen and (min-width:770px){
+@media screen and (min-width:768px){
     .btn{
         border-radius: 50px;
     }
@@ -124,27 +127,43 @@ table span{
         padding: 0.5px;
         font-size: 15px;
     }
+}
+
+@media screen and (max-width:540px){  
+    #agenda{
+        position: absolute;
+        left: 45%;
+        top: 20px;
+        font-size: 60px;
+    }
+    h1{
+        font-size: 2.2rem;
+        padding: 10px;
+        margin-top: 70px;
+    }
     .btn{
-        padding: 5px;
-        font-size: 14px;
+        width: 5rem;
+        padding: 8px;
+        margin-left: 10px;
     }
 }
 
 @media screen and (max-width:320px){
-    .btn{
-        margin-right: .2em;
-        margin-bottom: .5em;
-    }
-    table td, th {
-        font-size: .9rem;      
-    }
-}
-
-@media screen and (max-width:540px){
-    img{
+    #agenda{
         position: absolute;
-        left: 40%;
+        left: 43%;
+        top: 20px;
+        font-size: 50px;
     }
+    h1{
+        font-size: 1.8rem;
+        padding: 10px;
+        margin-top: 70px;
+    }
+    .btn{
+        width: 3.5rem;
+        padding: 5px;    
+    } 
 }
 
 @media screen and (min-width:1400px){
