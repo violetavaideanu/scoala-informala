@@ -62,7 +62,7 @@ function cancel(){
 }
 
 function del(idx){
-    if(confirm(`Esti sigur ca vrei sa stergi inregistrarea cu numele ${inregistrari[idx].nume} ?`)){
+    if(confirm(`Are you sure that you want to delete the contact with the name ${inregistrari[idx].nume} ?`)){
         inregistrari.splice(idx,1);
         draw();
     }	
