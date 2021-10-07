@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="vremea.css">
 </head>
 <body>
-    <h1 class="titlu">Vremea în</h1>
+    <h1 class="titlu">Weather in</h1>
     <div class="header">
-        <input type="text" placeholder="Introduceţi oraşul" id="oras" onblur="hidePrognoza();"/>
-        <button onclick="afiseazaVremea()">Afişează vremea</button>
-        <button onclick="afiseazaPrognoza();">Afişează prognoza</button>
+        <input type="text" placeholder="Enter city name" id="oras" onblur="hidePrognoza();"/>
+        <button onclick="afiseazaVremea()">Show weather</button>
+        <button onclick="afiseazaPrognoza();">Show forecast</button>
     </div>
     <div class="vremea">
-        <h1>Vremea acum</h1><br/><hr/><br/>
+        <h1>Weather now</h1><br/><hr/><br/>
         <div class="vremea-acum">
             <div class="leftSide col-lg-4 col-sm-6 col-xs-12">
                 <img src="" alt="" class="icon"/>
-                <div class="descriere">Descriere:</div>
-                <div class="umiditate">Umiditate:</div>
-                <div class="presiune">Presiune:</div>
-                <div class="temp">Temperatura curentă:</div>
-                <div class="min">Minima zilei:</div>
-                <div class="max">Maxima zilei:</div>
+                <div class="descriere">Description:</div>
+                <div class="umiditate">Humidity:</div>
+                <div class="presiune">Pressure:</div>
+                <div class="temp">Current temperature:</div>
+                <div class="min">Minimum of the day:</div>
+                <div class="max">Maximum of the day:</div>
             </div>
             <div class="map">
                 <iframe id="mapUrl" src="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" scrolling="no"></iframe>
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="vremea">
-        <h1>Vremea în urmatoarele zile</h1><br/><hr/><br/>
+        <h1>The weather for the next 5 days</h1><br/><hr/><br/>
         <div class="lista-prognoza">
             <ul class="ziua"></ul>
             <ul class="ziua"></ul>

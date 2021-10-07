@@ -14,12 +14,12 @@ async function afiseazaVremea(){
     let info = await response.json();
     
     document.querySelector(".icon").src = urlIcon + info.weather[0].icon + ".png";
-    document.querySelector(".descriere").innerText = `Descriere: ${info.weather[0].description}`;
-    document.querySelector(".umiditate").innerText = `Umiditate: ${info.main.humidity}%`;
-    document.querySelector(".presiune").innerText = `Presiune: ${info.main.pressure}`;
-    document.querySelector(".temp").innerText = `Temperatura curentă: ${Math.floor(info.main.temp)}°C`;
-    document.querySelector(".min").innerText = `Minima zilei: ${Math.floor(info.main.temp_min)}°C`;
-    document.querySelector(".max").innerText = `Maxima zilei: ${Math.floor(info.main.temp_max)}°C`;
+    document.querySelector(".descriere").innerText = `Description: ${info.weather[0].description}`;
+    document.querySelector(".umiditate").innerText = `Humidity: ${info.main.humidity}%`;
+    document.querySelector(".presiune").innerText = `Pressure: ${info.main.pressure}`;
+    document.querySelector(".temp").innerText = `Current temperature: ${Math.floor(info.main.temp)}°C`;
+    document.querySelector(".min").innerText = `Minimum of the day: ${Math.floor(info.main.temp_min)}°C`;
+    document.querySelector(".max").innerText = `Maximum of the day: ${Math.floor(info.main.temp_max)}°C`;
     document.querySelector("#mapUrl").src = `${urlHarta.front}q=${selectedCity}${urlHarta.end}`;
 }
 async function afiseazaPrognoza() {
@@ -33,26 +33,27 @@ async function afiseazaPrognoza() {
     
     function genereazaPrognoza() {
 
-        let dataCurenta = info.list[0].dt_txt.substr(0, 10);
+        let lista = info.list
+        let dataCurenta = lista[0].dt_txt.substr(0, 10);
         let ziua = document.querySelectorAll(".ziua");
         let indexZi = 0;
-        ziua[indexZi].innerHTML = `<p class="data"><strong>Data: ${dataCurenta}</strong></p>`;
+        ziua[indexZi].innerHTML = `<p class="data"><strong>Date: ${dataCurenta}</strong></p>`;
 
-        for (let i = 0; i < info.list.length; i++) {
-            let icon = `${urlIcon}${info.list[i].weather[0].icon}.png`;
-            let dataLista = info.list[i].dt_txt.substr(0, 10);
+        for (let i = 0; i < lista.length; i++) {
+            let icon = `${urlIcon}${lista[i].weather[0].icon}.png`;
+            let dataLista = lista[i].dt_txt.substr(0, 10);
 
             if (dataLista === dataCurenta) {
                 ziua[indexZi].innerHTML += `
                    <li><img src="${icon}"></li>
-                   <li><strong style="text-transform: capitalize";>${info.list[i].weather[0].description}</strong></li>
-                   <li>Ora: ${info.list[i].dt_txt.substr(11, 5)}</li>
-                   <li>Temp: ${Math.floor(info.list[i].main.temp)}°C</li>` 
+                   <li><strong style="text-transform: capitalize";>${lista[i].weather[0].description}</strong></li>
+                   <li>Hour: ${lista[i].dt_txt.substr(11, 5)}</li>
+                   <li>Temp: ${Math.floor(lista[i].main.temp)}°C</li>` 
             }
             else {
                 indexZi += 1;
                 dataCurenta = dataLista;
-                ziua[indexZi].innerHTML = `<p class="data"><strong>Data: <span>${dataCurenta}</strong></p>`
+                ziua[indexZi].innerHTML = `<p class="data"><strong>Date: <span>${dataCurenta}</strong></p>`
                 i--;
             }
         }
