@@ -103,7 +103,7 @@ nav ul li:hover a{
 }
 .cart-items{
     position: absolute;
-    top: 20px;
+    top: 3%;
     right: 115px;
     background: var(--primaryColor);
     padding: 0 5px;
@@ -987,5 +987,54 @@ tr:nth-child(even) {
     bottom: 30px;
     pointer-events: auto;
     opacity: 1;
+}
+
+@media screen and (max-width:1024px){
+    .cart-items{
+        position: absolute;
+        top: 27%;
+        right: 43%;  
+    }
+}
+
+@media screen and (max-width:768px){
+    .cart-items{
+        position: absolute;
+        top: 36%;
+        right: 42%;  
+    }
+}
+
+@media screen and (max-width:540px){
+    .cart-items{
+        position: absolute;
+        top: 50%;
+        right: 40%;  
+    }
+}
+
+@media screen and (max-width:414px){
+    .cart-items{
+        position: absolute;
+        top: 50%;
+        right:35%;  
+    }
+}
+
+@media screen and (max-width:375px){
+    .cart-items{
+        position: absolute;
+        top: 55%;
+        right:33%;  
+    }
+}
+
+
+@media screen and (max-width:320px){
+    .cart-items{
+        position: absolute;
+        top: 65%;
+        right:30%;  
+    }
 }
 
