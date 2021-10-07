@@ -1,4 +1,4 @@
-let url = "https://ceramicart-f7c9f-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://ceramicstore-16b14-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduseAdmin = [];
 let produs = {};
@@ -26,7 +26,7 @@ function drawProduseAdmin(){
         <tr>
             <td><img src="${produs.poza}"/></td>
             <td><a href="edit.html?id=${i}">${produs.nume}</a></td>
-            <td>${produs.pret}.00 Lei</td>
+            <td>${produs.pret}.00 €</td>
             <td>${produs.cantitate}</td>
             <td class="remove-btn"><a href="delete.html?id=${i}">Remove</a></td>
         </tr>  

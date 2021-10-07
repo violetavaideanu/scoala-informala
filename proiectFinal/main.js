@@ -1,6 +1,6 @@
 //Products Page
 
-let url = "https://ceramicart-f7c9f-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://ceramicstore-16b14-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduse = [];
 let produs = {};
@@ -36,7 +36,7 @@ function drawProduse(){
                     <div class="viewBtn"><button id="btnView">View</button></div>
                     <h3>${produs.nume}</h3>
                 </a>
-                    <h4>${produs.pret}.00 Lei</h4>
+                    <h4>${produs.pret}.00 €</h4>
                 </div>
             </div>   
         `
@@ -60,10 +60,10 @@ function drawDetalii(){
 
 	document.querySelector("#poza").src = produs.poza;
     document.querySelector("#nume").innerText = produs.nume;
-    document.querySelector("#pret").innerHTML = `<strong>Pret:</strong> <span>${produs.pret}.00 Lei</span>`;
-    document.querySelector("#cantitate").innerHTML = `<strong>In stoc:</strong> ${produs.cantitate} buc`;
+    document.querySelector("#pret").innerHTML = `<strong>Price:</strong> <span>${produs.pret}.00 €</span>`;
+    document.querySelector("#cantitate").innerHTML = `<strong>In stock: ${produs.cantitate}</strong>`;
     document.querySelector("#descriere").innerHTML = `
-    <dt><strong>Descriere produs:</strong></dt>
+    <dt><strong>Product Description:</strong></dt>
     <dd>${produs.descriere}</dd>
     `
 }
@@ -86,7 +86,7 @@ function addToCart() {
         if (item.id === id) {
             found = true;
             if(item.quantity + quantity > stoc){
-                alert("CANTITATEA SELECTATA DEPASESTE STOCUL DISPONIBIL!");
+                alert("THE QUANTITY REQUESTED EXCEEDS THE AVAILABLE STOCK!");
             } else {
                 item.quantity += quantity;
                 showToast();
@@ -97,7 +97,7 @@ function addToCart() {
     }
     
     if (!found && quantity > stoc) {
-        alert("CANTITATEA SELECTATA DEPASESTE STOCUL DISPONIBIL!");
+        alert("THE QUANTITY REQUESTED EXCEEDS THE AVAILABLE STOCK!");
     }
     if (!found &&  quantity <= stoc) {
             cart.push({ 
@@ -131,7 +131,7 @@ function countCart() {
 function showToast(){
     let toast = document.getElementById("toast");
     toast.classList.add("show");
-    toast.innerHTML = (`Produsul "${produs.nume}" a fost adaugat in cos!`);
+    toast.innerHTML = (`The product "${produs.nume}" was added to your cart!`);
     setTimeout(function(){
         toast.classList.remove("show");
     },3000);
@@ -153,21 +153,21 @@ function drawCart() {
                     <div class="cart-product-info">
                         <p class="cart-product-name">${cart[i].nume}</p>
                 </a>
-                        <p class="cart-price-sm">${cart[i].pret}.00 Lei</p>
+                        <p class="cart-price-sm">${cart[i].pret}.00 €</p>
                     </div>
                 </div>
                 <div class="cart-quantity-md">
                     <div class="cart-quantity-controls">
                         <button onclick="decrease('${cart[i].id}');">-</button>
-                        <input type="text" class="qty" value="${cart[i].quantity}" />
+                        <input type="text" class="qty" value="${cart[i].quantity}"/>
                         <button onclick="increase('${cart[i].id}');">+</button>
                     </div>
                 </div>
                 <div class="cart-unit-price">
-                    <h4>${cart[i].pret}.00 Lei</h4>
+                    <h4>${cart[i].pret}.00 €</h4>
                 </div>
                 <div class="cart-product-subtotal">
-                    <h4>${cart[i].pret * cart[i].quantity}.00 Lei</h4>
+                    <h4>${cart[i].pret * cart[i].quantity}.00 €</h4>
                 </div>
                 <div class="cart-remove">
                     <input id="stergeBtn" onclick="sterge('${i}');" class="btn" type="button" value="Remove"/>
@@ -223,15 +223,14 @@ function totalCart() {
         let itemQuantity = cart[i].quantity;
         let itemPret = cart[i].pret;
         total += itemQuantity * itemPret;
-        document.querySelector("#total").innerHTML = `Total: ${total}.00 Lei`;
+        document.querySelector("#total").innerHTML = `Total: ${total}.00 €`;
     }
 }
 
 function buy(){
     Swal.fire({
         type: "success",
-        title: "Success",
-        text: "Operation Completed"
+        text: "Order Completed"
     });
     setTimeout(function(){
         window.location = "index.html";
