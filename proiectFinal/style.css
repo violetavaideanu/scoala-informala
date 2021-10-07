@@ -1024,15 +1024,7 @@ tr:nth-child(even) {
 @media screen and (max-width:375px){
     .cart-items{
         position: absolute;
-        top: 55%;
-        right:33%;  
-    }
-}
-
-@media screen and (max-width:360px){
-    .cart-items{
-        position: absolute;
-        top: 58%;
+        top: 53%;
         right:33%;  
     }
 }
