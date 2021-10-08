@@ -4,7 +4,7 @@ let inregistrari = [
         "telefon": "0740112233"
     },
     {
-        "nume": "Cosmin",
+        "nume": "Cristi",
         "telefon": "0722657432"
     },
     {
