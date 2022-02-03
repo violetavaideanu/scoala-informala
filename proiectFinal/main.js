@@ -1,6 +1,6 @@
 //Products Page
 
-let url = "https://ceramicstore-16b14-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://ceramic-en-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduse = [];
 let produs = {};
