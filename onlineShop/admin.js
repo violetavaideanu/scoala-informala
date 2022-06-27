@@ -1,4 +1,4 @@
-let url = "https://ceramic-en-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://ceramicshop-54db5-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduseAdmin = [];
 let produs = {};
