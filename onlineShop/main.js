@@ -1,6 +1,6 @@
 //Products Page
 
-let url = "https://eshop-58a98-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://shop-d6a41-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduse = [];
 let produs = {};
