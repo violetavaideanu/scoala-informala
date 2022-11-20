@@ -1,12 +1,11 @@
 //Products Page
 
-let url = "https://shop-d6a41-default-rtdb.europe-west1.firebasedatabase.app/";
+let url = "https://magazinceramica-default-rtdb.europe-west1.firebasedatabase.app/";
 let id = window.location.search.substr(4);
 let listaProduse = [];
 let produs = {};
 let cartStr = localStorage.getItem("cart");
 let cart = JSON.parse(cartStr);
-	
 
 
 async function getListaProduse() {
